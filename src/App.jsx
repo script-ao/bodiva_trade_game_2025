@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import './App.scss'
+import './sass/main.scss';
+
 
 function App() {
   return (
