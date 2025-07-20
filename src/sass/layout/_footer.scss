@@ -1,1 +1,24 @@
 /* ============= FOOTER ============= */
+@use '../abstracts' as *;
+
+.fo_wrapper {
+    width: 100%;
+    padding: 1.5rem 0;
+
+    background: $metal-gradient;
+}
+
+.fo_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fo_social_list-container {
+    display: flex;
+    gap: 1rem;
+}
+
+.fo_social_list-container img {
+    width: 2rem;
+}

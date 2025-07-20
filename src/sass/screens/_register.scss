@@ -1,0 +1,84 @@
+@use "../abstracts" as *;
+
+.re_wrapper {
+  height: 100svh;
+  width: 100%;
+
+  background: $blue-radial;
+
+  display: flex;
+}
+
+.re_board-wrapper {
+  height: 80svh;
+  width: 80%;
+  
+  border-radius: 4rem;
+  overflow: hidden;
+  background-color: $blue;
+}
+
+.re_container {
+  flex: 1;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.re_board-container {
+  height: 100%;
+  width: 100%;
+  
+  display: flex;
+  flex-direction: column;
+}
+
+// .re_capital-container {
+//     display: flex;
+//     gap: 5rem;
+// }
+
+.re_board {
+  flex: 1;
+  display: flex;
+  
+  background: url("../assets/svgs/backgrouds/patterns/pattern_1.svg") no-repeat;
+  background-size: cover;
+}
+
+.board {
+  flex: 1;
+  background: url("../assets/svgs/backgrouds/gradients/gradient_2.svg") no-repeat;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+}
+
+.re_board-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 4rem;
+}
+
+.re_logo-container img {
+  width: 14rem;
+}
+
+.re_text-description {
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+
+  color: white;
+  font-size: 3rem;
+  font-weight: 500;
+  font-family: 'Zona Pro';
+}

@@ -1,1 +1,27 @@
 /* ============= VARIABLES ============= */
+
+$blue: #1f4872;
+$green: #8bc05e;
+$gray: #929496;
+
+$blue-radial: radial-gradient(
+  40.56% 72.12% at 50% 50%,
+  #356ba0 0%,
+  #2d5682 61%,
+  #28486d 100%
+);
+$metal-gradient: linear-gradient(
+  90deg,
+  #dbd7d4 0%,
+  #cfccca 5%,
+  #b2afb0 14%,
+  #88858a 26%,
+  #979599 32%,
+  #c1c0c2 42%,
+  #f2f3f3 52%,
+  #b3b1b4 72%,
+  #7e7a7f 88%,
+  #8d8a8e 91%,
+  #b4b4b6 96%,
+  #a5a6a9 100%
+);

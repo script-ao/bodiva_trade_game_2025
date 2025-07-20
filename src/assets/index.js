@@ -1,0 +1,1 @@
+export { vectorImages } from './svgs'
