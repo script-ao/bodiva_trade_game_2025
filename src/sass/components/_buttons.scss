@@ -1,1 +1,19 @@
 /* ============= BUTTONS ============= */
+@use '../abstracts' as *;
+
+.btn {
+  width: 100%;
+  padding: 1rem 4rem;
+  
+  font-size: 1.9rem;
+  font-weight: 600;
+  font-family: 'Zona Pro';
+  color: white;
+
+  border: none;
+  border-radius: .4rem;
+}
+
+.btn_green {
+    background-color: $green;
+}
