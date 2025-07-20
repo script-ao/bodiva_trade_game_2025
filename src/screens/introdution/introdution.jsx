@@ -1,8 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Footer, Button } from "../../components";
 import { vectorImages } from "../../assets";
 
 function Introdution() {
+  const navigate = useNavigate();
+
+  function handleClick() {
+    navigate("/register");
+  }
   return (
     <React.Fragment>
       <section className="in_wrapper">
@@ -21,7 +27,11 @@ function Introdution() {
                       <span>em tempo real.</span>
                     </div>
                     <div className="button_container">
-                      <Button text="Começar" className="btn btn_green"/>
+                      <Button
+                        text="Começar"
+                        className="btn btn_green"
+                        onClick={handleClick}
+                      />
                     </div>
                   </div>
                 </div>

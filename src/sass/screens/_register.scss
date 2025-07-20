@@ -1,4 +1,5 @@
 @use "../abstracts" as *;
+@use "../base" as *;
 
 .re_wrapper {
   height: 100svh;
@@ -12,7 +13,7 @@
 .re_board-wrapper {
   height: 80svh;
   width: 80%;
-  
+
   border-radius: 4rem;
   overflow: hidden;
   background-color: $blue;
@@ -20,18 +21,16 @@
 
 .re_container {
   flex: 1;
-  
+
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-
-
 .re_board-container {
   height: 100%;
   width: 100%;
-  
+
   display: flex;
   flex-direction: column;
 }
@@ -44,14 +43,15 @@
 .re_board {
   flex: 1;
   display: flex;
-  
+
   background: url("../assets/svgs/backgrouds/patterns/pattern_1.svg") no-repeat;
   background-size: cover;
 }
 
 .board {
   flex: 1;
-  background: url("../assets/svgs/backgrouds/gradients/gradient_2.svg") no-repeat;
+  background: url("../assets/svgs/backgrouds/gradients/gradient_2.svg")
+    no-repeat;
   background-size: cover;
 
   display: flex;
@@ -59,6 +59,8 @@
 }
 
 .re_board-content {
+  width: 80%;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -79,6 +81,43 @@
 
   color: white;
   font-size: 3rem;
-  font-weight: 500;
-  font-family: 'Zona Pro';
+  font-weight: 600;
+  font-family: "Zona Pro";
+}
+
+// FORM
+.re_form-container {
+  width: 100%;
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    & ::placeholder {
+      font-size: 2rem;
+      color: #648e28;
+      font-family: $main-font;
+    }
+  }
+  input {
+    font-size: 2rem;
+    font-family: $main-font;
+
+    border: none;
+    outline: none;
+    border-radius: .4rem;
+    background-color: $green;
+    
+    padding: 1rem 2rem;
+    color: #648e28;
+  }
+}
+
+.re_button_container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 2rem;
 }

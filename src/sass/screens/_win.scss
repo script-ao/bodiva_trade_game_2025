@@ -1,6 +1,6 @@
 @use "../abstracts" as *;
 
-.ba_wrapper {
+.wi_wrapper {
   height: 100svh;
   width: 100%;
 
@@ -9,7 +9,7 @@
   display: flex;
 }
 
-.ba_board-wrapper {
+.wi_board-wrapper {
   height: 80svh;
   width: 80%;
   
@@ -18,7 +18,7 @@
   background-color: $blue;
 }
 
-.ba_container {
+.wi_container {
   flex: 1;
   
   display: flex;
@@ -26,9 +26,7 @@
   justify-content: center;
 }
 
-
-
-.ba_board-container {
+.wi_board-container {
   height: 100%;
   width: 100%;
   
@@ -36,12 +34,12 @@
   flex-direction: column;
 }
 
-.ba_capital-container {
+.wi_capital-container {
     display: flex;
     gap: 5rem;
 }
 
-.ba_board {
+.wi_board {
   flex: 1;
   display: flex;
   
@@ -58,7 +56,7 @@
   justify-content: center;
 }
 
-.ba_board-content {
+.wi_board-content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -67,11 +65,11 @@
   gap: 4rem;
 }
 
-.ba_logo-container img {
+.wi_logo-container img {
   width: 14rem;
 }
 
-.ba_text-description {
+.wi_text-description {
   display: flex;
   flex-direction: column;
 
@@ -79,6 +77,6 @@
 
   color: white;
   font-size: 3rem;
-  font-weight: 600;
+  font-weight: 500;
   font-family: 'Zona Pro';
 }

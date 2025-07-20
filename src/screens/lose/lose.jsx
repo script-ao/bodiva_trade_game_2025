@@ -1,11 +1,33 @@
 import React from "react";
+import { Footer, Button } from "../../components";
+import { vectorImages } from "../../assets";
 
 function Lose() {
   return (
     <React.Fragment>
-      <section>
-        <main>
-          <h1>Lose</h1>
+      <section className="lo_wrapper">
+        <main className="lo_container">
+          <div className="lo_board-wrapper">
+            <div className="lo_board-container">
+              <div className="lo_board">
+                <div className="board">
+                  <div className="lo_board-content">
+                    <div className="lo_logo-container">
+                      <img src={vectorImages.logo.brand_logo} alt="" />
+                    </div>
+                    <div className="lo_text-description">
+                      <span>Infelizmente</span>
+                      <span>Não foi desta</span>
+                    </div>
+                    <div className="button_container">
+                      <Button text="Recomeçar" className="btn btn_green"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <Footer />
+            </div>
+          </div>
         </main>
       </section>
     </React.Fragment>
