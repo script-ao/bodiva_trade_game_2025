@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 59.94 59.94">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="29.97" y1="59.94" x2="29.97" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e2e0dd" stop-opacity=".2"/>
+      <stop offset=".12" stop-color="#e4e3e0" stop-opacity=".25"/>
+      <stop offset=".34" stop-color="#ebeae9" stop-opacity=".37"/>
+      <stop offset=".52" stop-color="#f2f3f3" stop-opacity=".5"/>
+      <stop offset="1" stop-color="#a5a6a9" stop-opacity=".4"/>
+      <stop offset="1" stop-color="#cfd1d2"/>
+    </linearGradient>
+  </defs>
+  <g id="OBJECTS">
+    <g>
+      <circle class="cls-1" cx="29.97" cy="29.97" r="29.97"/>
+      <path class="cls-2" d="M23.52,28.25h.2c.64,0,1.24.33,1.58.88l3.14,5.01c.73,1.16,2.41,1.17,3.15.02l3.26-5.05c.34-.53.94-.86,1.57-.86h0c1.5,0,2.39,1.68,1.54,2.92l-6.35,9.3c-.35.51-.93.81-1.54.81h-.2c-.62,0-1.2-.3-1.54-.81l-6.35-9.3c-.85-1.24.04-2.92,1.54-2.92Z"/>
+      <rect class="cls-2" x="27.73" y="18.95" width="4.48" height="18.6" rx="1.87" ry="1.87" transform="translate(59.94 56.51) rotate(-180)"/>
+    </g>
+  </g>
+</svg>

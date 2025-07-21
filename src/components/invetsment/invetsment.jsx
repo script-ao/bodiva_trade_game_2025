@@ -1,21 +1,21 @@
 import React from "react";
 import { vectorImages } from "../../assets";
 
-function Timer() {
+function Investment() {
   return (
     <React.Fragment>
-      <div className="ti_wrapper">
-        <div className="ti_title">Tempo</div>
-        <div className="ti_container">
-          <div className="ti_btn-container">
+      <div className="inv_wrapper">
+        <div className="inv_title">Investimento</div>
+        <div className="inv_container">
+          <div className="inv_btn-container">
             <button>
               <img src={vectorImages.icons.market.minor} alt="" />
             </button>
           </div>
-          <div className="ti_value_timer-container">
-            <span>00:10:00</span>
+          <div className="inv_value_finance-container">
+            <span>300.000</span>
           </div>
-          <div className="ti_btn-container">
+          <div className="inv_btn-container">
             <button>
               <img src={vectorImages.icons.market.plus} alt="" />
             </button>
@@ -26,4 +26,4 @@ function Timer() {
   );
 }
 
-export { Timer };
+export { Investment };

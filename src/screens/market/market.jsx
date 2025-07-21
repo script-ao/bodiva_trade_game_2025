@@ -1,6 +1,12 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { Button } from "../../components";
+import {
+  Button,
+  ButtonBet,
+  CandlestickChart,
+  Timer,
+  Investment,
+} from "../../components";
 import { vectorImages } from "../../assets";
 
 function Market() {
@@ -16,7 +22,9 @@ function Market() {
           <div className="ma_board-container">
             <main className="ma_graphic-container">
               <div className="ma_graphic-content">
-                <div className="ma_graphic">teste</div>
+                <div className="ma_graphic">
+                  <CandlestickChart />
+                </div>
               </div>
             </main>
             <div className="ma_sidebar-container">
@@ -27,8 +35,16 @@ function Market() {
                       <span>Saldo Actual</span>
                     </div>
                     <div className="ma_balance-value">
-                      <Button text="50.000,00 Akz" className="btn btn_green"/>
+                      <Button text="50.000,00 Akz" className="btn btn_green" />
                     </div>
+                  </div>
+                  <div className="ma_inputs-container">
+                    <Timer />
+                    <Investment />
+                  </div>
+                  <div className="ma_bet-container">
+                    <ButtonBet text="Baixar" icon="up" className="btn_bet-green"/>
+                    <ButtonBet text="Subir" icon="down" className="btn_bet-red"/>
                   </div>
                 </div>
               </div>
