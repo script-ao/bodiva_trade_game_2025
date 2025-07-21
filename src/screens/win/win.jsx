@@ -1,8 +1,18 @@
 import React from "react";
 import { Footer, Button } from "../../components";
 import { vectorImages } from "../../assets";
+import { useGame } from "../../context";
+import { useNavigate } from "react-router-dom";
 
 function Win() {
+  const { resetGame, saldoAtual } = useGame();
+  const navigate = useNavigate();
+
+  function handleRestart() {
+    resetGame();
+    navigate("/");
+  }
+
   return (
     <React.Fragment>
       <section className="wi_wrapper">
@@ -18,10 +28,10 @@ function Win() {
                     <div className="wi_text-description">
                       <span>Boa jogada!</span>
                       <span>Você Aculumou:</span>
-                      <span>250.000,00 Akz</span>
+                      <span>{saldoAtual.toLocaleString('pt-PT')} Akz</span>
                     </div>
                     <div className="button_container">
-                      <Button text="Recomeçar" className="btn btn_green"/>
+                      <Button text="Recomeçar" className="btn btn_green" onClick={handleRestart}/>
                     </div>
                   </div>
                 </div>
