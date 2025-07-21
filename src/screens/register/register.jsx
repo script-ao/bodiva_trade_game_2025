@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Footer, Button } from "../../components";
+import { useGame } from "../../context";
 
 function Register() {
   const navigate = useNavigate();
+  const { setUser } = useGame();
+  const [nome, setNome] = useState("");
+  const [email, setEmail] = useState("");
 
-  function handleClick() {
-    navigate("/market");
+  function handleSubmit(e) {
+    e.preventDefault();
+    setUser(nome, email);
+    navigate("/balance");
   }
   return (
     <React.Fragment>
@@ -22,13 +28,15 @@ function Register() {
                     </div>
 
                     <div className="re_form-container">
-                      <form action="market" method="post" onSubmit={handleClick}>
+                      <form onSubmit={handleSubmit}>
                         <input
                           type="text"
                           id="nome"
                           name="nome"
                           placeholder="Nome:*"
                           required
+                          value={nome}
+                          onChange={e => setNome(e.target.value)}
                         />
 
                         <input
@@ -37,6 +45,8 @@ function Register() {
                           name="email"
                           placeholder="Email:*"
                           required
+                          value={email}
+                          onChange={e => setEmail(e.target.value)}
                         />
 
                         <div className="re_button_container">

@@ -2,12 +2,13 @@ import "./sass/main.scss";
 
 import React from "react";
 import { AppRouter } from "./routes";
+import { GameProvider } from "./context";
 
 function App() {
   return (
-    <React.Fragment>
+    <GameProvider>
       <AppRouter />
-    </React.Fragment>
+    </GameProvider>
   );
 }
 

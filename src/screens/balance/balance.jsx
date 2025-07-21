@@ -1,13 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Footer, Button } from "../../components";
-import { vectorImages } from "../../assets";
+import { useGame } from "../../context";
 
 function Balance() {
   const navigate = useNavigate();
+  const { setCapital } = useGame();
+  const [selected, setSelected] = useState(null);
 
-  function handleClick() {
-    navigate("/market");
+  function handleSelect(value) {
+    setSelected(value);
+    setCapital(value);
+  }
+
+  function handleContinue() {
+    if (selected) {
+      navigate("/market");
+    }
   }
   return (
     <React.Fragment>
@@ -27,13 +36,15 @@ function Balance() {
                       <div className="button_container">
                         <Button
                           text="50.000,00 AKZ"
-                          className="btn btn_green"
+                          className={`btn btn_green${selected===50000?" selected":""}`}
+                          onClick={() => handleSelect(50000)}
                         />
                       </div>
                       <div className="button_container">
                         <Button
                           text="100.000,00 AKZ"
-                          className="btn btn_green"
+                          className={`btn btn_green${selected===100000?" selected":""}`}
+                          onClick={() => handleSelect(100000)}
                         />
                       </div>
                     </div>
@@ -41,7 +52,8 @@ function Balance() {
                       <Button
                         text="Continuar"
                         className="btn btn_green"
-                        onClick={handleClick}
+                        onClick={handleContinue}
+                        disabled={!selected}
                       />
                     </div>
                   </div>

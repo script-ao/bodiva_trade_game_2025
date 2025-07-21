@@ -1,8 +1,18 @@
 import React from "react";
 import { Footer, Button } from "../../components";
 import { vectorImages } from "../../assets";
+import { useGame } from "../../context";
+import { useNavigate } from "react-router-dom";
 
 function Lose() {
+  const { resetGame } = useGame();
+  const navigate = useNavigate();
+
+  function handleRestart() {
+    resetGame();
+    navigate("/");
+  }
+
   return (
     <React.Fragment>
       <section className="lo_wrapper">
@@ -20,7 +30,7 @@ function Lose() {
                       <span>Não foi desta</span>
                     </div>
                     <div className="button_container">
-                      <Button text="Recomeçar" className="btn btn_green"/>
+                      <Button text="Recomeçar" className="btn btn_green" onClick={handleRestart}/>
                     </div>
                   </div>
                 </div>

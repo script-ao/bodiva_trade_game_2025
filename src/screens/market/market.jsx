@@ -1,20 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import {
-  Button,
   ButtonBet,
   CandlestickChart,
   Timer,
   Investment,
+  Label
 } from "../../components";
-import { vectorImages } from "../../assets";
+import { useGame } from "../../context";
 
 function Market() {
   const navigate = useNavigate();
+  const { saldoAtual, status, result, betChoice, jogadas } = useGame();
 
-  function handleClick() {
-    navigate("/register");
-  }
+  useEffect(() => {
+    if (status === "win") navigate("/win");
+    if (status === "lose") navigate("/lose");
+  }, [status, navigate]);
+
   return (
     <React.Fragment>
       <section className="ma_wrapper">
@@ -35,7 +38,7 @@ function Market() {
                       <span>Saldo Actual</span>
                     </div>
                     <div className="ma_balance-value">
-                      <Button text="50.000,00 Akz" className="btn btn_green" />
+                      <Label text={`${saldoAtual.toLocaleString('pt-PT')} Akz`} />
                     </div>
                   </div>
                   <div className="ma_inputs-container">
@@ -43,8 +46,17 @@ function Market() {
                     <Investment />
                   </div>
                   <div className="ma_bet-container">
-                    <ButtonBet text="Baixar" icon="up" className="btn_bet-green"/>
-                    <ButtonBet text="Subir" icon="down" className="btn_bet-red"/>
+                    <ButtonBet text="Subir" icon="up" className="btn_bet-green"/>
+                    <ButtonBet text="Baixar" icon="down" className="btn_bet-red"/>
+                  </div>
+                  <div style={{marginTop: 16, minHeight: 24, textAlign: 'center'}}>
+                    {result && betChoice && (
+                      <span>
+                        Resultado: {result === betChoice ? "Ganhou!" : "Perdeu!"} ({result === "up" ? "Subiu" : "Baixou"})
+                      </span>
+                    )}
+                    <br/>
+                    <span>Jogada {jogadas + 1} de 5</span>
                   </div>
                 </div>
               </div>

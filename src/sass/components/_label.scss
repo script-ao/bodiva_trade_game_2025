@@ -1,0 +1,26 @@
+@use '../abstracts' as *;
+@use '../base' as *;
+
+.label_wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $green;
+  border-radius: 10px;
+}
+
+.label-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.1rem 2.2rem;
+}
+
+.label-container span {
+  font-size: 1.5rem;
+  font-weight: $font-semibold;
+  font-family: $main-font;
+  color: white;
+}
