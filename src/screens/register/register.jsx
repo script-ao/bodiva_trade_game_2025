@@ -1,8 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Footer, Button } from "../../components";
-import { vectorImages } from "../../assets";
 
 function Register() {
+  const navigate = useNavigate();
+
+  function handleClick() {
+    navigate("/market");
+  }
   return (
     <React.Fragment>
       <section className="re_wrapper">
@@ -16,22 +21,31 @@ function Register() {
                       <span>INSIRA OS SEUS DADOS</span>
                     </div>
 
-                    <div className="re_capital-container">
-                      <div className="button_container">
-                        <Button
-                          text="50.000,00 AKZ"
-                          className="btn btn_green"
+                    <div className="re_form-container">
+                      <form action="market" method="post" onSubmit={handleClick}>
+                        <input
+                          type="text"
+                          id="nome"
+                          name="nome"
+                          placeholder="Nome:*"
+                          required
                         />
-                      </div>
-                      <div className="button_container">
-                        <Button
-                          text="100.000,00 AKZ"
-                          className="btn btn_green"
+
+                        <input
+                          type="email"
+                          id="email"
+                          name="email"
+                          placeholder="Email:*"
+                          required
                         />
-                      </div>
-                    </div>
-                    <div className="button_container">
-                      <Button text="Enviar" className="btn btn_green" />
+
+                        <div className="re_button_container">
+                          <Button
+                            text="Enviar"
+                            className="btn btn_green"
+                          />
+                        </div>
+                      </form>
                     </div>
                   </div>
                 </div>

@@ -1,8 +1,9 @@
 /* ============= BUTTONS ============= */
 @use '../abstracts' as *;
+@use '../base' as *;
 
 .btn {
-  width: 100%;
+  
   padding: 1rem 4rem;
   
   font-size: 1.9rem;
@@ -16,4 +17,45 @@
 
 .btn_green {
     background-color: $green;
+}
+
+
+/* ============= BTN BET ============= */
+.btn_bet-wrapper {
+  width: 100%;
+}
+
+.btn_bet-container {
+  width: 100%;
+
+  padding: 1rem 2rem;
+  padding-right: 4rem;
+  border-radius: .4rem;
+  border: none;
+}
+
+.btn_bet-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.btn_bet-icon img {
+  width: 3rem;
+}
+
+.btn_bet-text span {
+  color: white;
+  font-size: 2.6rem;
+  font-weight: $font-regular;
+}
+
+
+.btn_bet-green {
+  background-color: $green;
+}
+
+.btn_bet-red {
+  background-color: #bf5858;
 }

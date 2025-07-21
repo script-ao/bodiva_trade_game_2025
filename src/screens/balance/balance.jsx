@@ -1,8 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Footer, Button } from "../../components";
 import { vectorImages } from "../../assets";
 
 function Balance() {
+  const navigate = useNavigate();
+
+  function handleClick() {
+    navigate("/market");
+  }
   return (
     <React.Fragment>
       <section className="ba_wrapper">
@@ -12,7 +18,6 @@ function Balance() {
               <div className="ba_board">
                 <div className="board">
                   <div className="ba_board-content">
-                    
                     <div className="ba_text-description">
                       <span>SELECCIONE O</span>
                       <span>CAPITAL INICIAL</span>
@@ -20,14 +25,24 @@ function Balance() {
 
                     <div className="ba_capital-container">
                       <div className="button_container">
-                      <Button text="50.000,00 AKZ" className="btn btn_green"/>
+                        <Button
+                          text="50.000,00 AKZ"
+                          className="btn btn_green"
+                        />
+                      </div>
+                      <div className="button_container">
+                        <Button
+                          text="100.000,00 AKZ"
+                          className="btn btn_green"
+                        />
+                      </div>
                     </div>
                     <div className="button_container">
-                      <Button text="100.000,00 AKZ" className="btn btn_green"/>
-                    </div>
-                    </div>
-                    <div className="button_container">
-                      <Button text="Começar" className="btn btn_green"/>
+                      <Button
+                        text="Continuar"
+                        className="btn btn_green"
+                        onClick={handleClick}
+                      />
                     </div>
                   </div>
                 </div>

@@ -1,0 +1,90 @@
+@use "../abstracts" as *;
+@use "../base" as *;
+
+.ma_wrapper {
+  height: 100svh;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: $blue-radial;
+}
+
+.ma_container {
+  height: 90svh;
+  width: 90%;
+  
+  overflow: hidden;
+  // background-color: red;
+}
+
+.ma_board-container {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.ma_sidebar-container {
+  padding: 2rem;
+}
+
+.ma_sidebar {
+  width: 100%;
+  height: 100%;
+}
+
+.ma_balance-container {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ma_balance {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.ma_balance-title span{
+  color: white;
+  font-size: 3.2rem;
+  font-weight: $font-bold;
+  font-family: $main-font;
+}
+
+.ma_inputs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.ma_bet-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+// GRAPHIC
+.ma_graphic-container {
+  flex: 1;
+  padding: 2rem;
+}
+
+.ma_graphic-content {
+  width: 100%;
+  height: 100%;
+
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.ma_graphic {
+  height: 100%;
+}

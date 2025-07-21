@@ -9,6 +9,12 @@ import facebook from './icons/facebook.svg';
 import linkedin from './icons/linkedin.svg';
 import youtube from './icons/youtube.svg';
 
+// Market
+import down from './icons/market/down.svg';
+import up from './icons/market/up.svg';
+import minor from './icons/market/minor.svg';
+import plus from './icons/market/plus.svg';
+
 const vectorImages = {
     gradients: {
         blue_gradient
@@ -17,7 +23,13 @@ const vectorImages = {
         instagram,
         facebook,
         linkedin,
-        youtube
+        youtube,
+        market: {
+            up,
+            down,
+            minor,
+            plus
+        }
     },
     logo: {
         brand_logo
